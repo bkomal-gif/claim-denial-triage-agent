@@ -1,0 +1,483 @@
+[
+  {
+    "claim_id": "CLM-1000",
+    "denial_code": "CO-16",
+    "expected": "correct_and_resubmit",
+    "predicted": "correct_and_resubmit",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy"
+    ],
+    "rationale": "Add missing information: ['rendering_provider_npi']."
+  },
+  {
+    "claim_id": "CLM-1001",
+    "denial_code": "CO-4",
+    "expected": "correct_and_resubmit",
+    "predicted": "correct_and_resubmit",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy"
+    ],
+    "rationale": "Add missing information: ['modifier_RT_or_LT']."
+  },
+  {
+    "claim_id": "CLM-1002",
+    "denial_code": "CO-18",
+    "expected": "write_off",
+    "predicted": "write_off",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy"
+    ],
+    "rationale": "Duplicate of an adjudicated claim; no action needed."
+  },
+  {
+    "claim_id": "CLM-1003",
+    "denial_code": "CO-29",
+    "expected": "appeal",
+    "predicted": "appeal",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy",
+      "draft_appeal"
+    ],
+    "rationale": "Proof of timely filing is on file."
+  },
+  {
+    "claim_id": "CLM-1004",
+    "denial_code": "CO-50",
+    "expected": "appeal",
+    "predicted": "appeal",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy",
+      "draft_appeal"
+    ],
+    "rationale": "Clinical documentation supports medical necessity."
+  },
+  {
+    "claim_id": "CLM-1005",
+    "denial_code": "CO-197",
+    "expected": "appeal",
+    "predicted": "appeal",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy",
+      "draft_appeal"
+    ],
+    "rationale": "Prior authorization was obtained; attaching the authorization number."
+  },
+  {
+    "claim_id": "CLM-1006",
+    "denial_code": "CO-97",
+    "expected": "appeal",
+    "predicted": "appeal",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy",
+      "draft_appeal"
+    ],
+    "rationale": "Service was separate and distinct; resubmitting with modifier 59."
+  },
+  {
+    "claim_id": "CLM-1007",
+    "denial_code": "CO-16",
+    "expected": "correct_and_resubmit",
+    "predicted": "correct_and_resubmit",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy"
+    ],
+    "rationale": "Add missing information: ['patient_dob']."
+  },
+  {
+    "claim_id": "CLM-1008",
+    "denial_code": "CO-4",
+    "expected": "correct_and_resubmit",
+    "predicted": "correct_and_resubmit",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy"
+    ],
+    "rationale": "Add missing information: ['modifier_RT_or_LT']."
+  },
+  {
+    "claim_id": "CLM-1009",
+    "denial_code": "CO-18",
+    "expected": "write_off",
+    "predicted": "write_off",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy"
+    ],
+    "rationale": "Duplicate of an adjudicated claim; no action needed."
+  },
+  {
+    "claim_id": "CLM-1010",
+    "denial_code": "CO-29",
+    "expected": "write_off",
+    "predicted": "write_off",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy"
+    ],
+    "rationale": "No proof of timely filing."
+  },
+  {
+    "claim_id": "CLM-1011",
+    "denial_code": "CO-50",
+    "expected": "appeal",
+    "predicted": "appeal",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy",
+      "draft_appeal"
+    ],
+    "rationale": "Clinical documentation supports medical necessity."
+  },
+  {
+    "claim_id": "CLM-1012",
+    "denial_code": "CO-197",
+    "expected": "appeal",
+    "predicted": "appeal",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy",
+      "draft_appeal"
+    ],
+    "rationale": "Prior authorization was obtained; attaching the authorization number."
+  },
+  {
+    "claim_id": "CLM-1013",
+    "denial_code": "CO-97",
+    "expected": "write_off",
+    "predicted": "write_off",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy"
+    ],
+    "rationale": "Service was not distinct; bundling is correct."
+  },
+  {
+    "claim_id": "CLM-1014",
+    "denial_code": "CO-16",
+    "expected": "correct_and_resubmit",
+    "predicted": "correct_and_resubmit",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy"
+    ],
+    "rationale": "Add missing information: ['rendering_provider_npi']."
+  },
+  {
+    "claim_id": "CLM-1015",
+    "denial_code": "CO-4",
+    "expected": "correct_and_resubmit",
+    "predicted": "correct_and_resubmit",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy"
+    ],
+    "rationale": "Add missing information: ['modifier_RT_or_LT']."
+  },
+  {
+    "claim_id": "CLM-1016",
+    "denial_code": "CO-18",
+    "expected": "write_off",
+    "predicted": "write_off",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy"
+    ],
+    "rationale": "Duplicate of an adjudicated claim; no action needed."
+  },
+  {
+    "claim_id": "CLM-1017",
+    "denial_code": "CO-29",
+    "expected": "appeal",
+    "predicted": "appeal",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy",
+      "draft_appeal"
+    ],
+    "rationale": "Proof of timely filing is on file."
+  },
+  {
+    "claim_id": "CLM-1018",
+    "denial_code": "CO-50",
+    "expected": "appeal",
+    "predicted": "appeal",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy",
+      "draft_appeal"
+    ],
+    "rationale": "Clinical documentation supports medical necessity."
+  },
+  {
+    "claim_id": "CLM-1019",
+    "denial_code": "CO-197",
+    "expected": "appeal",
+    "predicted": "appeal",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy",
+      "draft_appeal"
+    ],
+    "rationale": "Prior authorization was obtained; attaching the authorization number."
+  },
+  {
+    "claim_id": "CLM-1020",
+    "denial_code": "CO-97",
+    "expected": "write_off",
+    "predicted": "write_off",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy"
+    ],
+    "rationale": "Service was not distinct; bundling is correct."
+  },
+  {
+    "claim_id": "CLM-1021",
+    "denial_code": "CO-16",
+    "expected": "correct_and_resubmit",
+    "predicted": "correct_and_resubmit",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy"
+    ],
+    "rationale": "Add missing information: ['patient_dob']."
+  },
+  {
+    "claim_id": "CLM-1022",
+    "denial_code": "CO-4",
+    "expected": "correct_and_resubmit",
+    "predicted": "correct_and_resubmit",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy"
+    ],
+    "rationale": "Add missing information: ['modifier_RT_or_LT']."
+  },
+  {
+    "claim_id": "CLM-1023",
+    "denial_code": "CO-18",
+    "expected": "write_off",
+    "predicted": "write_off",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy"
+    ],
+    "rationale": "Duplicate of an adjudicated claim; no action needed."
+  },
+  {
+    "claim_id": "CLM-1024",
+    "denial_code": "CO-29",
+    "expected": "appeal",
+    "predicted": "appeal",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy",
+      "draft_appeal"
+    ],
+    "rationale": "Proof of timely filing is on file."
+  },
+  {
+    "claim_id": "CLM-1025",
+    "denial_code": "CO-50",
+    "expected": "write_off",
+    "predicted": "write_off",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy"
+    ],
+    "rationale": "No supporting clinical documentation."
+  },
+  {
+    "claim_id": "CLM-1026",
+    "denial_code": "CO-197",
+    "expected": "appeal",
+    "predicted": "appeal",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy",
+      "draft_appeal"
+    ],
+    "rationale": "Prior authorization was obtained; attaching the authorization number."
+  },
+  {
+    "claim_id": "CLM-1027",
+    "denial_code": "CO-97",
+    "expected": "appeal",
+    "predicted": "appeal",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy",
+      "draft_appeal"
+    ],
+    "rationale": "Service was separate and distinct; resubmitting with modifier 59."
+  },
+  {
+    "claim_id": "CLM-1028",
+    "denial_code": "CO-50",
+    "expected": "appeal",
+    "predicted": "appeal",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy",
+      "draft_appeal"
+    ],
+    "rationale": "Clinical documentation supports medical necessity."
+  },
+  {
+    "claim_id": "CLM-1029",
+    "denial_code": "CO-197",
+    "expected": "write_off",
+    "predicted": "write_off",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy"
+    ],
+    "rationale": "No authorization on file."
+  },
+  {
+    "claim_id": "CLM-1030",
+    "denial_code": "CO-11",
+    "expected": "escalate",
+    "predicted": "escalate",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy"
+    ],
+    "rationale": "No rule for CO-11."
+  },
+  {
+    "claim_id": "CLM-1031",
+    "denial_code": "CO-11",
+    "expected": "escalate",
+    "predicted": "escalate",
+    "correct": true,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy"
+    ],
+    "rationale": "No rule for CO-11."
+  },
+  {
+    "claim_id": "CLM-1032",
+    "denial_code": "CO-50",
+    "expected": "escalate",
+    "predicted": "write_off",
+    "correct": false,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy"
+    ],
+    "rationale": "No supporting clinical documentation."
+  },
+  {
+    "claim_id": "CLM-1033",
+    "denial_code": "CO-197",
+    "expected": "escalate",
+    "predicted": "write_off",
+    "correct": false,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy"
+    ],
+    "rationale": "No authorization on file."
+  },
+  {
+    "claim_id": "CLM-1034",
+    "denial_code": "CO-29",
+    "expected": "escalate",
+    "predicted": "write_off",
+    "correct": false,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy"
+    ],
+    "rationale": "No proof of timely filing."
+  },
+  {
+    "claim_id": "CLM-1035",
+    "denial_code": "CO-97",
+    "expected": "escalate",
+    "predicted": "write_off",
+    "correct": false,
+    "tools": [
+      "lookup_denial_code",
+      "check_claim_fields",
+      "search_payer_policy"
+    ],
+    "rationale": "Service was not distinct; bundling is correct."
+  }
+]
