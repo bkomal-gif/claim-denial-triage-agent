@@ -1,5 +1,7 @@
 langgraph>=1.0
 langchain-core>=1.0
-# Only needed for --mode llm:
+fastapi>=0.110
+uvicorn>=0.29
+# LLM mode (optional at runtime; needs an API key):
 langchain>=1.0
-langchain-openai>=1.0      # or langchain-anthropic, langchain-google-genai
+langchain-openai>=1.0

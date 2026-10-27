@@ -89,6 +89,31 @@ python src/run.py --claim CLM-1004 --mode llm
 python eval/evaluate.py --mode llm
 ```
 
+## REST API and deployment
+
+The agent is served as a **FastAPI** app (`src/api.py`) and packaged with **Docker**.
+
+| Endpoint | Purpose |
+|---|---|
+| `GET /health` | Liveness check |
+| `GET /claims`, `GET /claims/{id}` | Browse the sample claims |
+| `POST /triage` | Triage a claim (`{"claim_id": "CLM-1004", "mode": "rules"}`) |
+| `POST /triage/{thread_id}/review` | Approve or reject a paused appeal (`{"approve": true}`) |
+
+Appeals return `status: pending_approval` with the draft letter and a `thread_id`; the run resumes only after the review call. This is the same LangGraph `interrupt()` used in the CLI, exposed over HTTP. Interactive docs are at `/docs`.
+
+```bash
+# Local, without Docker
+uvicorn api:app --app-dir src --port 7860
+
+# With Docker
+docker build -t triage-agent .
+docker run -p 7860:7860 triage-agent                         # rules mode
+docker run -p 7860:7860 -e OPENAI_API_KEY=sk-... triage-agent  # enables llm mode
+```
+
+Live demo: *add your deployment URL here*
+
 ## Roadmap
 
 - [x] LangGraph workflow with tools, short- and long-term memory, and human approval
@@ -97,7 +122,7 @@ python eval/evaluate.py --mode llm
 - [ ] Evaluate the LLM agent and compare it with the baseline, focusing on the hard cases
 - [ ] Appeal-letter quality: a scoring rubric (correctness, groundedness in policy, completeness) plus LLM-as-judge, checked against human scores
 - [ ] Larger and noisier dataset (conflicting fields, multiple denial codes per claim)
-- [ ] FastAPI endpoint + Docker
+- [x] FastAPI service with human-review endpoint, Docker image, cloud deployment
 
 ## Project structure
 
