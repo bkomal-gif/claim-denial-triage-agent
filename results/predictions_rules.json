@@ -413,7 +413,7 @@
       "check_claim_fields",
       "search_payer_policy"
     ],
-    "rationale": "No rule for CO-11."
+    "rationale": ""
   },
   {
     "claim_id": "CLM-1031",
@@ -426,58 +426,58 @@
       "check_claim_fields",
       "search_payer_policy"
     ],
-    "rationale": "No rule for CO-11."
+    "rationale": ""
   },
   {
     "claim_id": "CLM-1032",
     "denial_code": "CO-50",
     "expected": "escalate",
-    "predicted": "write_off",
-    "correct": false,
+    "predicted": "escalate",
+    "correct": true,
     "tools": [
       "lookup_denial_code",
       "check_claim_fields",
       "search_payer_policy"
     ],
-    "rationale": "No supporting clinical documentation."
+    "rationale": "clinical_documentation_available is unknown; needs human review."
   },
   {
     "claim_id": "CLM-1033",
     "denial_code": "CO-197",
     "expected": "escalate",
-    "predicted": "write_off",
-    "correct": false,
+    "predicted": "escalate",
+    "correct": true,
     "tools": [
       "lookup_denial_code",
       "check_claim_fields",
       "search_payer_policy"
     ],
-    "rationale": "No authorization on file."
+    "rationale": "prior_auth_on_file is unknown; needs human review."
   },
   {
     "claim_id": "CLM-1034",
     "denial_code": "CO-29",
     "expected": "escalate",
-    "predicted": "write_off",
-    "correct": false,
+    "predicted": "escalate",
+    "correct": true,
     "tools": [
       "lookup_denial_code",
       "check_claim_fields",
       "search_payer_policy"
     ],
-    "rationale": "No proof of timely filing."
+    "rationale": "proof_of_timely_filing is unknown; needs human review."
   },
   {
     "claim_id": "CLM-1035",
     "denial_code": "CO-97",
     "expected": "escalate",
-    "predicted": "write_off",
-    "correct": false,
+    "predicted": "escalate",
+    "correct": true,
     "tools": [
       "lookup_denial_code",
       "check_claim_fields",
       "search_payer_policy"
     ],
-    "rationale": "Service was not distinct; bundling is correct."
+    "rationale": "distinct_service_documented is unknown; needs human review."
   }
 ]
