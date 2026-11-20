@@ -138,7 +138,7 @@ def decide_rules(state: TriageState) -> dict:
         if f.get(key) is None:
             return {"decision": "escalate", "rationale": f"{key} is unknown; needs human review."}
         return {"decision": "appeal", "rationale": yes} if f.get(key) else {"decision": "write_off", "rationale": no}
-            return {"decision": "escalate", "rationale": f"No rule for {code}."}
+        return {"decision": "escalate", "rationale": f"No rule for {code}."}
 
 # --------------------------------------------------------------- LLM agent
 
