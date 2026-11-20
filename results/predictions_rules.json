@@ -413,7 +413,7 @@
       "check_claim_fields",
       "search_payer_policy"
     ],
-    "rationale": ""
+    "rationale": "No rule for CO-11."
   },
   {
     "claim_id": "CLM-1031",
@@ -426,7 +426,7 @@
       "check_claim_fields",
       "search_payer_policy"
     ],
-    "rationale": ""
+    "rationale": "No rule for CO-11."
   },
   {
     "claim_id": "CLM-1032",
